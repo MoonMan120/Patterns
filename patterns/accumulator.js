@@ -32,9 +32,14 @@ export function factorial(n) {
  * @returns `[]` if n is 0 or negative
  */
 export function buildNArray(n) {
-  // TODO
-}
+  if (typeof n !== "number") return null;
+  if (n <= 0) return [];
 
+  for (let i = 0; i < n; i++);
+  {
+  }
+  return;
+}
 /**
  * @param {string[]} strings
  * @returns {string} the longest string in `strings`

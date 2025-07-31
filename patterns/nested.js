@@ -46,5 +46,11 @@ export function makeTriangle(size) {
  * @returns `0` if `letter is not a string
  */
 export function countLetter(words, letter) {
-  // TODO
+  let count = 0;
+  for (const countWords of words) {
+    if (alph === letter) {
+      count += 1;
+    }
+  }
+  return count;
 }
