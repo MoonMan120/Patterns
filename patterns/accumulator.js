@@ -40,7 +40,13 @@ export function buildNArray(n) {
  * @returns {string} the longest string in `strings`
  */
 export function getLongestString(strings) {
-  // TODO
+  let longestS = "";
+  for (string in strings) {
+    if (string.length > longestS.length) {
+      longestS = string;
+    }
+  }
+  return longestS;
 }
 
 /**
@@ -48,7 +54,13 @@ export function getLongestString(strings) {
  * @returns {number} the number of students present
  */
 export function countPresent(attendance) {
-  // TODO
+  let present = 0;
+  for (const attends of attendance) {
+    if (attends) {
+      present += 1;
+    }
+  }
+  return present;
 }
 
 /**
@@ -62,5 +74,19 @@ export function countPresent(attendance) {
  * @returns `null` if `dna` is not a string
  */
 export function complementDNA(dna) {
-  // TODO
+  if (typeof dna !== "string") return null;
+
+  let complete = "";
+  for (const nucleobase of dna) {
+    if (nucleobase === "A") {
+      complete += "T";
+    } else if (nucleobase === "T") {
+      complete += "A";
+    } else if (nucleobase === "C") {
+      complete += "G";
+    } else if (nucleobase === "G") {
+      complete += "C";
+    }
+  }
+  return complete;
 }
